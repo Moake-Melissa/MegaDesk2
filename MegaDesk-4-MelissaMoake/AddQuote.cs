@@ -94,7 +94,7 @@ namespace MegaDesk_4_MelissaMoake
         {
             // If all conditions have been met, clear the ErrorProvider of errors.
             depthErrorProvider.SetError(depth, "");
-            width.BackColor = default(Color);
+            depth.BackColor = default(Color);
         }
 
         public bool ValidWidth(string width, out string errorMessage)
@@ -189,6 +189,7 @@ namespace MegaDesk_4_MelissaMoake
                 DeskQuote NewOrder = new DeskQuote(CustomerName, DateTime.Now, DeskWidth, 
                     DeskDepth, Drawers, MaterialType, RushOrderDays);
                 DeskQuotePrice = NewOrder.CalculateQuoteTotal();
+                DeskQuotePrice = Math.Round(DeskQuotePrice, 2);
             }
             catch (Exception ex)
             {

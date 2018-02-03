@@ -19,7 +19,6 @@ namespace MegaDesk_4_MelissaMoake
             List<MaterialType> MaterialTypeList = Enum.GetValues(typeof(MaterialType))
                 .Cast<MaterialType>().ToList();
             materialSearchBox.DataSource = MaterialTypeList;
-            materialSearchBox.Text = "Select an Option...";
         }
 
         private void cancelSearchQuotesButton_Click(object sender, MouseEventArgs e)
@@ -51,9 +50,9 @@ namespace MegaDesk_4_MelissaMoake
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + "There is a problem");
             }
         }
     }
