@@ -58,21 +58,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(99, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 17);
+            this.label1.Size = new System.Drawing.Size(172, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Search By Material Type";
+            this.label1.Text = "Search By Material Type:";
             // 
             // searchResults
             // 
-            this.searchResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchResults.FormattingEnabled = true;
-            this.searchResults.ItemHeight = 16;
+            this.searchResults.ItemHeight = 18;
             this.searchResults.Location = new System.Drawing.Point(12, 120);
             this.searchResults.Name = "searchResults";
-            this.searchResults.Size = new System.Drawing.Size(539, 196);
+            this.searchResults.Size = new System.Drawing.Size(539, 184);
             this.searchResults.TabIndex = 4;
             // 
             // DeskQuoteView
