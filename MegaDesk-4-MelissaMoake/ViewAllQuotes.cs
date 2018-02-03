@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace MegaDesk_4_MelissaMoake
 {
-    public partial class Form1 : Form
+    public partial class ViewAllQuotes : Form
     {
-        public Form1()
+        public ViewAllQuotes()
         {
             InitializeComponent();
+        }
+
+        private void cancelViewAllQuotesButton_Click(object sender, MouseEventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
         }
     }
 }
