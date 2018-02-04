@@ -48,6 +48,7 @@
             // 
             // materialSearchBox
             // 
+            this.materialSearchBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.materialSearchBox.FormattingEnabled = true;
             this.materialSearchBox.Location = new System.Drawing.Point(273, 34);
             this.materialSearchBox.Name = "materialSearchBox";

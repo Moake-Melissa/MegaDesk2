@@ -152,13 +152,13 @@
             // 
             // materialTypeBox
             // 
+            this.materialTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.materialTypeBox.FormattingEnabled = true;
             this.materialTypeBox.Location = new System.Drawing.Point(178, 177);
             this.materialTypeBox.MaxDropDownItems = 5;
             this.materialTypeBox.Name = "materialTypeBox";
             this.materialTypeBox.Size = new System.Drawing.Size(153, 21);
             this.materialTypeBox.TabIndex = 5;
-            this.materialTypeBox.Text = "Select an option...";
             // 
             // widthError
             // 
@@ -180,6 +180,7 @@
             // 
             // rushOptions
             // 
+            this.rushOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rushOptions.FormattingEnabled = true;
             this.rushOptions.Items.AddRange(new object[] {
             "None",
@@ -191,7 +192,6 @@
             this.rushOptions.Name = "rushOptions";
             this.rushOptions.Size = new System.Drawing.Size(153, 21);
             this.rushOptions.TabIndex = 6;
-            this.rushOptions.Text = "Select an option...";
             // 
             // label2
             // 
@@ -213,6 +213,7 @@
             // 
             // numOfDrawers
             // 
+            this.numOfDrawers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.numOfDrawers.FormattingEnabled = true;
             this.numOfDrawers.Items.AddRange(new object[] {
             "0",
@@ -227,7 +228,6 @@
             this.numOfDrawers.Name = "numOfDrawers";
             this.numOfDrawers.Size = new System.Drawing.Size(73, 21);
             this.numOfDrawers.TabIndex = 4;
-            this.numOfDrawers.Text = "Select...";
             // 
             // AddDeskQuoteButton
             // 
