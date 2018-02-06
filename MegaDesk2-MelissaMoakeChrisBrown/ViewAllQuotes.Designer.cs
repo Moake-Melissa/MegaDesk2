@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_4_MelissaMoake
+﻿namespace MegaDesk2_MelissaMoakeChrisBrown
 {
     partial class ViewAllQuotes
     {
@@ -51,6 +51,7 @@
             this.viewAllQuotesBox.FormattingEnabled = true;
             this.viewAllQuotesBox.ItemHeight = 18;
             this.viewAllQuotesBox.Location = new System.Drawing.Point(12, 72);
+            this.viewAllQuotesBox.Margin = new System.Windows.Forms.Padding(25);
             this.viewAllQuotesBox.Name = "viewAllQuotesBox";
             this.viewAllQuotesBox.Size = new System.Drawing.Size(500, 238);
             this.viewAllQuotesBox.TabIndex = 2;

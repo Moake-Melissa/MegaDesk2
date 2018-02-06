@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_4_MelissaMoake
+﻿namespace MegaDesk2_MelissaMoakeChrisBrown
 {
     partial class DisplayQuote
     {

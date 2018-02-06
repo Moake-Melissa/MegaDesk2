@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaDesk_4_MelissaMoake
+namespace MegaDesk2_MelissaMoakeChrisBrown
 {
     class DeskQuote
     {
@@ -13,7 +13,7 @@ namespace MegaDesk_4_MelissaMoake
         public int RushDays { get; set; }
         public Desk Desk = new Desk();
         public decimal QuotePrice { get; set; }
-        private int[,] RushDayPrices = new int[,] { { 60, 70, 80 }, { 40, 50, 60 }, { 30,35, 40 } };
+        private int[,] RushDayPrices = new int[,] { { 60, 70, 80 }, { 40, 50, 60 }, { 30, 35, 40 } };
 
         private decimal SurfaceArea = 0;
 
