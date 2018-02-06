@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk2-MelissaMoakeChrisBrown", "MegaDesk-4-MelissaMoake\MegaDesk2-MelissaMoakeChrisBrown.csproj", "{E735222B-400B-4BCA-8E17-F734ABCA33D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk2-MelissaMoakeChrisBrown", "MegaDesk2-MelissaMoakeChrisBrown\MegaDesk2-MelissaMoakeChrisBrown.csproj", "{E735222B-400B-4BCA-8E17-F734ABCA33D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {34D53548-9766-48DB-BFAE-BD2FFEAE1D07}
+		SolutionGuid = {1F782CA1-090A-41B3-AB15-149522AE5572}
 	EndGlobalSection
 EndGlobal
