@@ -27,9 +27,9 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
             searchResults.Columns.Add("Width", -2, HorizontalAlignment.Left);
             searchResults.Columns.Add("Depth", -2, HorizontalAlignment.Left);
             searchResults.Columns.Add("# of Drawers", -2, HorizontalAlignment.Left);
-            searchResults.Columns.Add("Material Type", -2, HorizontalAlignment.Left);
+            searchResults.Columns.Add("Material", -2, HorizontalAlignment.Left);
             searchResults.Columns.Add("Rush Days", -2, HorizontalAlignment.Left);
-            searchResults.Columns.Add("Quote Price", -2, HorizontalAlignment.Left);
+            searchResults.Columns.Add("Price", -2, HorizontalAlignment.Left);
         }
 
         private void cancelSearchQuotesButton_Click(object sender, MouseEventArgs e)
@@ -65,7 +65,7 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
 
                             searchResults.Items.Add(new ListViewItem(new[]
                             {
-                                fromFile.CustomerName, fromFile.QuoteDate.ToString("dd MMMMM yyyy"), fromFile.Desk.Width.ToString(),
+                                fromFile.CustomerName, fromFile.QuoteDate.ToString("dd MMM yyyy"), fromFile.Desk.Width.ToString(),
                                 fromFile.Desk.Depth.ToString(), fromFile.Desk.NumOfDrawers.ToString(), fromFile.Desk.MaterialName, fromFile.RushDays.ToString(),
                                 fromFile.QuotePrice.ToString()
                              }

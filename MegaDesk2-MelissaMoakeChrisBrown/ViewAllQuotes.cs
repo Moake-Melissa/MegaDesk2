@@ -24,9 +24,9 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
             viewAllQuotesBox.Columns.Add("Width", -2, HorizontalAlignment.Left);
             viewAllQuotesBox.Columns.Add("Depth", -2, HorizontalAlignment.Left);
             viewAllQuotesBox.Columns.Add("# of Drawers", -2, HorizontalAlignment.Left);
-            viewAllQuotesBox.Columns.Add("Material Type", -2, HorizontalAlignment.Left);
+            viewAllQuotesBox.Columns.Add("Material", -2, HorizontalAlignment.Left);
             viewAllQuotesBox.Columns.Add("Rush Days", -2, HorizontalAlignment.Left);
-            viewAllQuotesBox.Columns.Add("Quote Price", -2, HorizontalAlignment.Left);
+            viewAllQuotesBox.Columns.Add("Price", -2, HorizontalAlignment.Left);
 
             try
             {
@@ -44,7 +44,7 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
 
                         viewAllQuotesBox.Items.Add(new ListViewItem(new[]
                             {
-                                fromFile.CustomerName, fromFile.QuoteDate.ToString("dd MMMMM yyyy"), fromFile.Desk.Width.ToString(),
+                                fromFile.CustomerName, fromFile.QuoteDate.ToString("dd MMM yyyy"), fromFile.Desk.Width.ToString(),
                                 fromFile.Desk.Depth.ToString(), fromFile.Desk.NumOfDrawers.ToString(), fromFile.Desk.MaterialName, fromFile.RushDays.ToString(),
                                 fromFile.QuotePrice.ToString()
                              }
