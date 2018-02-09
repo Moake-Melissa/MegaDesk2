@@ -1,0 +1,18 @@
+Melissa, 02 February 2018, 45, 34, 3, Pine, 7, 965
+Melinda, 02 February 2018, 24, 12, 2, Laminate, 0, 400
+Marissa, 02 February 2018, 34, 23, 3, Oak, 5, 590
+Kaitlyn Moake, 02 February 2018, 34.56, 24.34, 5, Rosewood, 3, 810
+Melissa, 02 February 2018, 45, 34, 4, Oak, 3, 1200
+Melissa, 02 February 2018, 45, 34, 4, Pine, 5, 1030
+Kenny, 02 February 2018, 34, 45, 4, Pine, 7, 1015
+Nicole Moake, 02 February 2018, 34.65, 46.98, 4, Veneer, 5, 1202.86
+Sarah, 02 February 2018, 25, 48, 5, Veneer, 5, 825
+Matthew, 02 February 2018, 25, 47, 5, Laminate, 5, 775
+Sarah, 02 February 2018, 45.67, 48, 7, Rosewood, 3, 2122.16
+Kenny, 03 February 2018, 26, 22, 4, Veneer, 5, 565
+Laura, 03 February 2018, 45, 34, 4, Oak, 7, 1165
+Jessica, 03 February 2018, 34, 25, 3, Rosewood, 5, 690
+Thomas, 03 February 2018, 34, 23, 2, Veneer, 5, 465
+Kenny, 05 February 2018, 38, 42, 2, Pine, 0, 946
+Nikki, 06 February 2018, 32, 45, 3, Oak, 5, 1040
+Melissa, 08 February 2018, 26, 45, 4, Veneer, 0, 695

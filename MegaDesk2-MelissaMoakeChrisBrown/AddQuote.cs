@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -157,6 +158,8 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
 
         private void AddDeskQuoteButton_Click(object sender, EventArgs e)
         {
+            DeskQuote NewOrder = null;
+            var json = "";
             try
             {
                 CustomerName = customerName.Text;
@@ -186,9 +189,10 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
                         break;
                 }
 
-                DeskQuote NewOrder = new DeskQuote(CustomerName, DateTime.Now, DeskWidth, 
+                NewOrder = new DeskQuote(CustomerName, DateTime.Now, DeskWidth, 
                     DeskDepth, Drawers, MaterialType, RushOrderDays);
                 DeskQuotePrice = NewOrder.CalculateQuoteTotal();
+                NewOrder.QuotePrice = DeskQuotePrice;
                 DeskQuotePrice = Math.Round(DeskQuotePrice, 2);
             }
             catch (Exception ex)
@@ -200,9 +204,11 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
             //save to a file
             try
             {
-                var DeskRecord = CustomerName + ", " + QuoteDate + ", " + DeskWidth + ", " + DeskDepth
-                    + ", " + Drawers + ", " + MaterialType + ", " + RushOrderDays + ", " + DeskQuotePrice;
-                string cFile = @"quotes.txt";
+                //var DeskRecord = CustomerName + ", " + QuoteDate + ", " + DeskWidth + ", " + DeskDepth
+                //+ ", " + Drawers + ", " + MaterialType + ", " + RushOrderDays + ", " + DeskQuotePrice;
+                json = JsonConvert.SerializeObject(NewOrder);
+
+                string cFile = @"quotes.json";
                 if (!File.Exists(cFile))
                 {
                     using (StreamWriter sw = File.CreateText(cFile))
@@ -211,7 +217,7 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
                 }
                 using (StreamWriter sw = File.AppendText(cFile))
                 {
-                    sw.WriteLine(DeskRecord);
+                    sw.WriteLine(json);
                 }
             }
             catch (Exception ex)

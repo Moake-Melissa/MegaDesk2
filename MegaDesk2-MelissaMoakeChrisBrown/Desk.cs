@@ -21,6 +21,7 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
         public decimal Depth;
         public int NumOfDrawers;
         public MaterialType MaterialType;
+        public string MaterialName { get { return this.MaterialType.ToString(); } set { } }
 
         public const decimal MIN_WIDTH = 24;
         public const decimal MAX_WIDTH = 96;

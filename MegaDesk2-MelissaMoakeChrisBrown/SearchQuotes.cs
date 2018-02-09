@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,15 +38,20 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
 
             try
             {
-                string cFile = @"quotes.txt";
+                string cFile = @"quotes.json";
                 using (StreamReader sr = new StreamReader(cFile))
                 {
                     string line;
+                    string display;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        if (line.Contains(MaterialType.ToString()))
+                        DeskQuote fromFile = JsonConvert.DeserializeObject<DeskQuote>(line);
+                        if (fromFile.Desk.MaterialName == MaterialType.ToString())
                         {
-                            searchResults.Items.Add(line);
+                            display = fromFile.CustomerName + ", " + fromFile.QuoteDate.ToString("dd MMMMM yyyy") + ", "
+                                + fromFile.Desk.Width + ", " + fromFile.Desk.Depth + ", " + fromFile.Desk.NumOfDrawers + ", "
+                                + fromFile.Desk.MaterialName + ", " + fromFile.RushDays + ", " + fromFile.QuotePrice;
+                            searchResults.Items.Add(display);
                         }
                     }
                 }
