@@ -5,3 +5,4 @@
 {"Desk":{"Width":56.0,"Depth":34.0,"NumOfDrawers":3,"MaterialType":100,"MaterialName":"Laminate"},"CustomerName":"Kaitlyn","QuoteDate":"2018-02-08T17:30:18.8605763-07:00","RushDays":3,"QuotePrice":1424.0}
 {"Desk":{"Width":87.0,"Depth":46.0,"NumOfDrawers":2,"MaterialType":50,"MaterialName":"Pine"},"CustomerName":"Melissa","QuoteDate":"2018-02-08T17:30:56.3318382-07:00","RushDays":0,"QuotePrice":3352.0}
 {"Desk":{"Width":34.0,"Depth":23.0,"NumOfDrawers":4,"MaterialType":50,"MaterialName":"Pine"},"CustomerName":"Melissa Moake","QuoteDate":"2018-02-08T18:37:00.9078458-07:00","RushDays":3,"QuotePrice":510.0}
+{"Desk":{"Width":34.0,"Depth":45.0,"NumOfDrawers":3,"MaterialType":50,"MaterialName":"Pine"},"CustomerName":"Melissa","QuoteDate":"2018-02-09T21:19:22.3652252-07:00","RushDays":5,"QuotePrice":980.0}

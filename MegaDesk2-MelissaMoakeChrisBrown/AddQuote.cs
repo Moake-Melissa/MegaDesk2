@@ -160,80 +160,90 @@ namespace MegaDesk2_MelissaMoakeChrisBrown
         {
             DeskQuote NewOrder = null;
             var json = "";
-            try
+
+            if (customerName.Text == "" || width.Text == "" || depth.Text == ""
+                    || numOfDrawers.SelectedItem == null || materialTypeBox.SelectedItem == null
+                    || rushOptions.SelectedItem == null)
             {
-                CustomerName = customerName.Text;
-                DeskWidth = decimal.Parse(width.Text);
-                DeskDepth = decimal.Parse(depth.Text);
-                Drawers = int.Parse(numOfDrawers.SelectedItem.ToString());
-
-                string Material = materialTypeBox.SelectedItem.ToString();
-                Enum.TryParse(Material, out MaterialType);
-
-                //rush order selection
-                RushOrderInput = rushOptions.SelectedItem.ToString();
-
-                switch (RushOrderInput)
+                MessageBox.Show("All Fields are Required", "Alert");
+            }
+            else
+            {
+                try
                 {
-                    case "3 Days":
-                        RushOrderDays = 3;
-                        break;
-                    case "5 Days":
-                        RushOrderDays = 5;
-                        break;
-                    case "7 Days":
-                        RushOrderDays = 7;
-                        break;
-                    default:
-                        RushOrderDays = 0;
-                        break;
+                    CustomerName = customerName.Text;
+                    DeskWidth = decimal.Parse(width.Text);
+                    DeskDepth = decimal.Parse(depth.Text);
+                    Drawers = int.Parse(numOfDrawers.SelectedItem.ToString());
+
+                    string Material = materialTypeBox.SelectedItem.ToString();
+                    Enum.TryParse(Material, out MaterialType);
+
+                    //rush order selection
+                    RushOrderInput = rushOptions.SelectedItem.ToString();
+
+                    switch (RushOrderInput)
+                    {
+                        case "3 Days":
+                            RushOrderDays = 3;
+                            break;
+                        case "5 Days":
+                            RushOrderDays = 5;
+                            break;
+                        case "7 Days":
+                            RushOrderDays = 7;
+                            break;
+                        default:
+                            RushOrderDays = 0;
+                            break;
+                    }
+
+                    NewOrder = new DeskQuote(CustomerName, DateTime.Now, DeskWidth,
+                        DeskDepth, Drawers, MaterialType, RushOrderDays);
+                    DeskQuotePrice = NewOrder.CalculateQuoteTotal();
+                    NewOrder.QuotePrice = DeskQuotePrice;
+                    DeskQuotePrice = Math.Round(DeskQuotePrice, 2);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Check input methods");
                 }
 
-                NewOrder = new DeskQuote(CustomerName, DateTime.Now, DeskWidth, 
-                    DeskDepth, Drawers, MaterialType, RushOrderDays);
-                DeskQuotePrice = NewOrder.CalculateQuoteTotal();
-                NewOrder.QuotePrice = DeskQuotePrice;
-                DeskQuotePrice = Math.Round(DeskQuotePrice, 2);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Check input methods");
-            }
-
-            string QuoteDate = DateTime.Now.ToString("dd MMMMM yyyy");
-            //save to a file
-            try
-            {
-                //var DeskRecord = CustomerName + ", " + QuoteDate + ", " + DeskWidth + ", " + DeskDepth
-                //+ ", " + Drawers + ", " + MaterialType + ", " + RushOrderDays + ", " + DeskQuotePrice;
-                json = JsonConvert.SerializeObject(NewOrder);
-
-                string cFile = @"quotes.json";
-                if (!File.Exists(cFile))
+                string QuoteDate = DateTime.Now.ToString("dd MMMMM yyyy");
+                //save to a file
+                try
                 {
-                    using (StreamWriter sw = File.CreateText(cFile))
+                    //var DeskRecord = CustomerName + ", " + QuoteDate + ", " + DeskWidth + ", " + DeskDepth
+                    //+ ", " + Drawers + ", " + MaterialType + ", " + RushOrderDays + ", " + DeskQuotePrice;
+                    json = JsonConvert.SerializeObject(NewOrder);
+
+                    string cFile = @"quotes.json";
+                    if (!File.Exists(cFile))
                     {
+                        using (StreamWriter sw = File.CreateText(cFile))
+                        {
+                        }
+                    }
+                    using (StreamWriter sw = File.AppendText(cFile))
+                    {
+                        sw.WriteLine(json);
                     }
                 }
-                using (StreamWriter sw = File.AppendText(cFile))
+                catch (Exception ex)
                 {
-                    sw.WriteLine(json);
+                    MessageBox.Show(ex.Message + "There is a problem");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "There is a problem");
-            }
 
-            //Show quote into on new page
-            var MainMenu = (MainMenu)Tag;
-            DisplayQuote newOrderView = new DisplayQuote(CustomerName, QuoteDate, DeskWidth,
-                DeskDepth, Drawers, MaterialType, RushOrderDays, DeskQuotePrice)
-            {
-                Tag = MainMenu
-            };
-            newOrderView.Show();
-            this.Close();
+                //Show quote into on new page
+                var MainMenu = (MainMenu)Tag;
+                DisplayQuote newOrderView = new DisplayQuote(CustomerName, QuoteDate, DeskWidth,
+                    DeskDepth, Drawers, MaterialType, RushOrderDays, DeskQuotePrice)
+                {
+                    Tag = MainMenu
+                };
+                newOrderView.Show();
+                this.Close();
+            }
         }
 
 
